@@ -1,5 +1,17 @@
 # PR-CTICA-10
 
+INTRODUCCIÓN
+
+El ejercicio consiste únicamente en hacer conexion a un servidor publico y encendidio de un led.
+
+Descripción La Esp32 la utilizamos en un entorno de adquision de datos, lo cual en esta practica solo ocuparemos un led; Esta practica se usara un simulador llamado WOKWI, junto con NodeRed.
+
+Material Necesario Para realizar esta practica necesitas lo siguiente: -Abrir Node.js -Abrir WOKWI colocar; Tarjeta ESP 32 Led Resistencia
+
+INSTRUCCIONES
+
+1- Abrir la terminal de programación en WOKWI y colocar la siguente codigo:
+
 #include <WiFi.h>
 #include <PubSubClient.h>
 
@@ -76,4 +88,21 @@ void callback(char* topic, byte* payload, unsigned int length) {
       digitalWrite(ledPin, LOW);
     }
   }
+
+  2- Instalar librerías.
+
+  ![Captura de pantalla 2024-01-27 013514](https://github.com/robertopatino42/PR-CTICA-10/assets/153964688/6e6fd812-d04e-47bb-82e5-eb67a2955e83)
+
+  3- Realizar las conexiones entre el Led y la tarjeta ESP32
+
+  ![Captura de pantalla 2024-01-27 013835](https://github.com/robertopatino42/PR-CTICA-10/assets/153964688/9518e73d-e100-4187-be35-da1cf4e2b2c6)
+
+  4- En Node red colocaremos los siquientes bloques que se requieren y nos aseguraremos de tener el mismo IP que en el codigo de WOKWI ademas de colocar correctamente el nombre del topico
+
+  5- Hacemos correr la programacion en WOKWI asegurandonos que se conecto de manera correcta. Finalmente el NODE-RED y la ESP32 dentro de WOKWI arrojaran los resultados deseados:
+
+  ![Captura de pantalla 2024-01-27 013835](https://github.com/robertopatino42/PR-CTICA-10/assets/153964688/6e7e292f-df06-469b-8131-f9370a789f03)
+
+  
+
 }
